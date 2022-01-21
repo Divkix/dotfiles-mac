@@ -22,15 +22,15 @@ find * -name "*fish*" | while read fn; do
 done
 clear_broken_symlinks "$DESTINATION"
 
-
+# after it has been installed by homebrew
 fish_shell_location="/opt/homebrew/bin/fish"
 
 set_fish_shell() {
-    if grep --quiet fish <<< "$SHELL"; then
+    if echo $SHELL | grep -q "$fish_shell_location"; then
         success "Fish shell is already set up."
     else
         substep_info "Checking if fish is installed..."
-        if cat /etc/shells | grep -q "/opt/homebrew/bin/fish"; then
+        if cat /etc/shells | grep -q "$fish_shell_location"; then
             substep_info "Fish shell already installed"
         else
             substep_error "Fish shell is not installed. Setting it up..."

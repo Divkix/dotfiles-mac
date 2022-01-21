@@ -1,8 +1,8 @@
 # setup gpg tty
 set -gx GPG_TTY (tty)
 
-# Add homebrew apps to path
-fish_add_path /opt/homebrew/sbin
+# eval homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Add local bin to path
 fish_add_path $HOME/.local/bin
@@ -19,7 +19,7 @@ fish_add_path $HOME/.cargo/bin
 # set starship config
 set -gx STARSHIP_CONFIG $HOME/.config/starship.toml
 
-# set CHROME_EXECUTABLE to Brave
+# set CHROME_EXECUTABLE to Brave Browser
 set -gx CHROME_EXECUTABLE "/Applications/Brave Browser.app/Contents/MacOS/Brave Browser"
 
 # start starship prompt
