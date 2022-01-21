@@ -2,7 +2,7 @@
 set -gx GPG_TTY (tty)
 
 # eval homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
+eval (/opt/homebrew/bin/brew shellenv)
 
 # Add local bin to path
 fish_add_path $HOME/.local/bin
