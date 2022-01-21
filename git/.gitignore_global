@@ -1,0 +1,19 @@
+# Node
+npm-debug.log
+
+# Idea files
+.idea/
+*.iml
+*.iws
+.idea-compl
+*.sc
+
+# General
+log/
+*.log
+
+# VS Code
+.vscode/
+
+# Mac OS DS_Store
+.DS_Store
